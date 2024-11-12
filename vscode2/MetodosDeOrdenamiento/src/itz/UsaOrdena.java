@@ -10,8 +10,15 @@ public class UsaOrdena {
         for (int i = 0; i < valores.length; i++) {
             valores[i] = Double.parseDouble(args[i]);
         }
-        Ordena.bubleSort(valores);
+        //Ordena.bubleSort(valores);
+        //showMessageDialog(null, Arrays.toString(valores));
+        //Ordena.sharkerSort(valores);
+
+        //Ordena.selectionSort(valores);
+        Ordena.insertionSort(valores);
         showMessageDialog(null, Arrays.toString(valores));
+        
+
        
 
         
