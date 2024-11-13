@@ -67,7 +67,7 @@ public class Ordena {
           for (int i=1; i<vector.length; i++) {
                double temp = vector[i];
                int j;
-               for (j=i-1; j>=0 && vector[j]>temp; j--) {
+               for (j=i-1; j>=0 && vector[j]<temp; j--) {
                     System.out.println(Arrays.toString(vector));
                     vector[j+1]=vector[j];
                }
