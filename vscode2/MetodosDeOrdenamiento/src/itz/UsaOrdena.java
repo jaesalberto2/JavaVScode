@@ -15,8 +15,9 @@ public class UsaOrdena {
         //Ordena.sharkerSort(valores);
 
         //Ordena.selectionSort(valores);
-        Ordena.insertionSort(valores);
+        //Ordena.insertionSort(valores);// lo cambiamos para que ordene de mayor a menor cambiando la comparacion
         //Ordena.binaryInsertionSort(valores);
+        Ordena.shellSort(valores);
         showMessageDialog(null, Arrays.toString(valores));
         
 

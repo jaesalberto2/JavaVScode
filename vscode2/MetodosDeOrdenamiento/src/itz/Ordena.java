@@ -94,4 +94,27 @@ public class Ordena {
           }
      }
 
+     //metodo por incremento decreciente
+     public static void shellSort(double [] vector) {
+          int salto, i;
+          boolean cambio;
+          double temp;
+          for (salto=vector.length/2; salto!=0; salto/=2) {
+               System.out.println(Arrays.toString(vector));
+               cambio=true;
+               while (cambio) {
+                    cambio=false;
+                    for (i=salto; i<vector.length; i++) {
+                         if (vector[i-salto]>vector[i]) {
+                              temp=vector[i];
+                              vector[i]=vector[i-salto];
+                              vector[i-salto]=temp;
+                              cambio=true;
+                         }
+                    }
+               }
+          }
+     }
+     
+
 }
