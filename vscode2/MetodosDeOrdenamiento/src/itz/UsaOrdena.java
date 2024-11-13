@@ -15,7 +15,8 @@ public class UsaOrdena {
         //Ordena.sharkerSort(valores);
 
         //Ordena.selectionSort(valores);
-        Ordena.insertionSort(valores);
+        //Ordena.insertionSort(valores);
+        Ordena.binaryInsertionSort(valores);
         showMessageDialog(null, Arrays.toString(valores));
         
 

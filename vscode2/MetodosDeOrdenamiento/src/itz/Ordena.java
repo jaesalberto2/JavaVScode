@@ -75,4 +75,23 @@ public class Ordena {
           }
      }
 
+     //metodo de insercion binaria
+     public static void binaryInsertionSort(double [] vector) {
+          for (int i=1; i<vector.length; i++) {
+               double temp = vector[i];
+               int izq=0, der=i-1;
+               while (izq<=der) {
+                    int centro = (izq+der)/2;
+                    if (temp<vector[centro]) der=centro-1;
+                    else izq=centro+1;
+                    System.out.println(Arrays.toString(vector));
+               }
+               for (int j=i-1; j>=izq; j--) {
+                    System.out.println(Arrays.toString(vector));
+                    vector[j+1]=vector[j];
+               }
+               vector[izq]=temp;
+          }
+     }
+
 }
