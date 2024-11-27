@@ -42,6 +42,18 @@ public class HashMapMascotas {
             System.out.println("Clave: " + entry.getKey() + ". Valor: " + entry.getValue());
         }
 
+        //verificar si existe una mascota con  un nombre en especifico
+        String nombre = "Garfield";
+        boolean existe = mascotas.values().stream().anyMatch(mascota -> mascota.getNombre().equals(nombre));
+        if (existe) {
+            System.out.println("Existe una mascota con el nombre: " + nombre);
+        } else {
+            System.out.println("No existe una mascota con el nombre: " + nombre);
+        }
+
+
+        
+
 
 
     }
