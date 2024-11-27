@@ -57,6 +57,21 @@ public class Busqueda {
         return res;
     }
 
+    //Metodo de ordenamiento
+
+    public void ordenar(){
+        int aux;
+        for (int i = 0; i < lista.size(); i++) {
+            for (int j = 0; j < lista.size()-1; j++) {
+                if(lista.get(j)>lista.get(j+1)){
+                    aux=lista.get(j);
+                    lista.set(j, lista.get(j+1));
+                    lista.set(j+1, aux);
+                }
+            }
+        }
+    }
+
 
 
 

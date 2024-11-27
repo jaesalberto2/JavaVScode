@@ -9,7 +9,7 @@ public class UsaBusqueda {
         int opcion = 0;
         do {
             try {
-                opcion = Integer.parseInt(JOptionPane.showInputDialog("1.- Agregar\n2.- Eliminar\n3.- Busqueda Secuencial\n4.- Busqueda Binaria\n5.Mostrar\n6.- Salir"));
+                opcion = Integer.parseInt(JOptionPane.showInputDialog("1.- Agregar\n2.- Eliminar\n3.- Busqueda Secuencial\n4.- Busqueda Binaria\n5.-Mostrar\n6.-Ordenar\n7.- Salir"));
                 switch (opcion) {
                     case 1:
                     {
@@ -44,9 +44,15 @@ public class UsaBusqueda {
                     case 5: 
                         JOptionPane.showMessageDialog(null, busqueda.toString());
                         break;
-
                     case 6:
+                        busqueda.ordenar();
+                        JOptionPane.showMessageDialog(null, "Lista ordenada");
+                        break;
+
+                    case 7:
                         JOptionPane.showMessageDialog(null, "Saliendo del programa");
+                        System.exit(0);
+
                         break;
                     default:
                         JOptionPane.showMessageDialog(null, "Opcion no valida");
@@ -55,7 +61,7 @@ public class UsaBusqueda {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
             }
-        } while (opcion != 5);
+        } while (opcion != 7);
     }
 
 }
