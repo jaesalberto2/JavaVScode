@@ -51,6 +51,14 @@ public class HashMapMascotas {
             System.out.println("No existe una mascota con el nombre: " + nombre);
         }
 
+        //buscar operadores lamda y ternario
+        //verificar si existe una mascota con  un nombre en especifico usando operadores lamda y ternario
+        String nombre2 = "Garfield";
+        System.out.println("Usando operadores lamda y ternario");
+        boolean existe2 = mascotas.values().stream().anyMatch(mascota -> mascota.getNombre().equals(nombre2));
+        System.out.println(existe2 ? "Existe una mascota con el nombre: " + nombre2 : "No existe una mascota con el nombre: " + nombre2);
+
+
 
         
 
