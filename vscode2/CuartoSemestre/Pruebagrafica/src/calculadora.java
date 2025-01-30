@@ -206,7 +206,12 @@ public class calculadora {
      }
      
      
+     //metodo para calcular
 private void calculate(JTextField element11) {
+    try {
+        
+  
+    
      String text = element11.getText();
      if (text.contains("+")) {
          String[] parts = text.split("\\+");
@@ -239,6 +244,9 @@ private void calculate(JTextField element11) {
          element11.setText("");
      }
 
+    } catch (Exception e) {
+        element11.setText("Error");
+    }
 
 
  }
