@@ -108,33 +108,51 @@ public class CalculadoraBasica extends JFrame implements ActionListener {
         bDivision.addActionListener(this);
         bIgual.addActionListener(this);
         bBorrar.addActionListener(this);
+        
 
 
 
         //mostrar frame
         frame.setVisible(true);
 
-        //recibir datos
-        num1 = Integer.parseInt(valor1);
-        num2 = Integer.parseInt(valor2);
-        res = Integer.parseInt(resultado);
-        //convertir a entero
-        int num1 = Integer.parseInt(valor1);
-        int num2 = Integer.parseInt(valor2);
-        int res = Integer.parseInt(resultado);
-
-        //operaciones
-        bSuma.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                res = num1 + num2;
-                txtResultado.setText(String.valueOf(res));
-            }
-        });
+        
 
                 
         
     }
+
+    //metodo para operaciones
+    public void operacion(JLabel pantalla) {
+        String texto = pantalla.getText();
+
+        if (texto.contains("+")) {
+            String[] numeros = texto.split("\\+");
+            num1 = Integer.parseInt(numeros[0]);
+            num2 = Integer.parseInt(numeros[1]);
+            res = num1 + num2;
+            pantalla.setText(String.valueOf(res));
+        } else if (texto.contains("-")) {
+            String[] numeros = texto.split("-");
+            num1 = Integer.parseInt(numeros[0]);
+            num2 = Integer.parseInt(numeros[1]);
+            res = num1 - num2;
+            pantalla.setText(String.valueOf(res));
+        } else if (texto.contains("*")) {
+            String[] numeros = texto.split("\\*");
+            num1 = Integer.parseInt(numeros[0]);
+            num2 = Integer.parseInt(numeros[1]);
+            res = num1 * num2;
+            pantalla.setText(String.valueOf(res));
+        } else if (texto.contains("/")) {
+            String[] numeros = texto.split("/");
+            num1 = Integer.parseInt(numeros[0]);
+            num2 = Integer.parseInt(numeros[1]);
+            res = num1 / num2;
+            pantalla.setText(String.valueOf(res));
+            
+        }
+        
+        }
 
 
     //action performed
