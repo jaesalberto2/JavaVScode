@@ -34,6 +34,19 @@ public class MenuEjemplo {
         acercaDeItem.addActionListener(e -> 
         JOptionPane.showMessageDialog(frame, "Bienvenido al menú de ejemplo","acerca de", JOptionPane.INFORMATION_MESSAGE));
 
+        abrirItem.addActionListener(e ->
+        JOptionPane.showMessageDialog(frame, "Abrir archivo","Abrir", JOptionPane.INFORMATION_MESSAGE));
+
+        guardarItem.addActionListener(e ->
+        JOptionPane.showMessageDialog(frame, "Guardar archivo","Guardar", JOptionPane.INFORMATION_MESSAGE));
+
+        copiarItem.addActionListener(e ->
+        JOptionPane.showMessageDialog(frame, "Copiar texto","Copiar", JOptionPane.INFORMATION_MESSAGE));
+
+        pegarItem.addActionListener(e ->
+        JOptionPane.showMessageDialog(frame, "Pegar texto","Pegar", JOptionPane.INFORMATION_MESSAGE));
+        
+
         //agregar los elementos de menu a los menus
         MenuArchivo.add(abrirItem);
         MenuArchivo.add(guardarItem);
