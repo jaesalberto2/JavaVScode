@@ -18,6 +18,11 @@ public class NuevaVentana {
 
 
 
+ 
+    
+ 
+
+
 class MarcoVentana extends JFrame {
 
 
