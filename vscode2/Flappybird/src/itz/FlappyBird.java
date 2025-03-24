@@ -121,6 +121,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
         velocityY += gravity;
         bird.y += velocityY;
         bird.y = Math.max(bird.y, 0); //apply gravity to current bird.y, limit the bird.y to top of the canvas
+       
 
         //pipes
         for (int i = 0; i < pipes.size(); i++) {
@@ -132,7 +133,7 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
                 // increment velocityX by 0.5 to make the game harder
                 velocityX -= 0.2;
                 pipe.passed = true;
-                placePipeTimer.setDelay((int) (placePipeTimer.getDelay() * 0.98)); //increase pipe spawn rate by 2%
+                placePipeTimer.setDelay((int) (placePipeTimer.getDelay() * 0.95)); //increase pipe spawn rate by 2%
             }
 
             if (collision(bird, pipe)) {

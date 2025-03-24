@@ -2,6 +2,7 @@ package itz;
 import javax.swing.*;
 
 
+
 public class App {
     public static void main(String[] args) throws Exception {
         int boardWidth = 360;
@@ -13,7 +14,9 @@ public class App {
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        // suppress the warning
+        
+        
         FlappyBird flappyBird = new FlappyBird();
         frame.add(flappyBird);
         frame.pack();
